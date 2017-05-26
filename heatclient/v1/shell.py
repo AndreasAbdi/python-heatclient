@@ -302,7 +302,7 @@ def do_stack_delete(hc, args):
 
     try:
         if not args.yes and sys.stdin.isatty():
-            sys.stdout.write(
+            print(
                 _("Are you sure you want to delete this stack(s) [y/N]? "))
             prompt_response = sys.stdin.readline().lower()
             if not prompt_response.startswith('y'):
